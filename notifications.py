@@ -2,13 +2,14 @@ import time
 from plyer import notification
 
 if __name__ == '__main__':
+    title = input('enter the title of the notifications >> ')
+    msg = input('enter the message of the notifications >> ')
+    gap = int(input('enter the time (in seconds) for delay between sending notifications >> '))
     while True:
         notification.notify(
-            title="This is a notification!",
-            message="I am an expert developer and I am flexing my development skills by sending useless notifications.",
-            # app_icon="F:\\programming\\Python\\My Python Practice\\noti_icon.ico",
-            app_icon="noti_icon.ico",
-            timeout=8
+            title = title,
+            message = msg,
+            app_icon = "noti_icon.ico",
+            timeout = 8
         )
-        time.sleep(6)
-        # time.sleep(60*60)
+        time.sleep(gap)
